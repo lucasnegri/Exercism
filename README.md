@@ -3,7 +3,7 @@
 To check my solution, enter the exercise folder and check the <b> nameOfTheExercise.js </b> archive. <br />
 
 
-How to Add a New Exercise<br />
+<h2> How to Add a New Exercise </h2> <br />
 
 1-  exercism download --exercise=exercise-name --track=path-name  <br />
 2-  Open the exercise dir  <br />
