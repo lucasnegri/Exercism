@@ -1,6 +1,6 @@
 # Exercism-Solutions <br />
 
-To check my solution, enter the exercise folder and check the <b> nameOfTheExercise.js <\b> archive. <br />
+To check my solution, enter the exercise folder and check the <b> nameOfTheExercise.js </b> archive. <br />
 
 
 How to Add a New Exercise<br />
