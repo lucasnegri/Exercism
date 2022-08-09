@@ -12,4 +12,4 @@ To check my solution, enter the exercise folder and check the <b> nameOfTheExerc
 5-  <code> git status </code> <br />
 6-  <code> git add 'newExerciseDir' </code>  <br />
 7-  <code> git commit -a -m 'Status of Exercise Name' </code>  <br />
-9-  <code> exercism submit door-policy.js </code>  <br />
+9-  <code> exercism submit exerciseScript.js </code>  <br />
