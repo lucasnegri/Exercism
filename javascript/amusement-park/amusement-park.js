@@ -10,8 +10,7 @@
  * @returns {Visitor} the visitor that was created
  */
 export function createVisitor(name, age, ticketId) {
-  const visitor = { name: name, age: age, ticketId: ticketId}
-  return visitor
+  return {name, age, ticketId}
 }
 
 /**
@@ -53,16 +52,9 @@ export function ticketStatus(tickets, ticketId) {
  * @returns {string} ticket status
  */
 export function simpleTicketStatus(tickets, ticketId) {
-  const name = tickets[ticketId]
-  switch (name){
-    case undefined:
-      return "invalid ticket !!!";
-    case null:
-      return "invalid ticket !!!";
-    default: 
-      return `${name}`;
-  }
+  return tickets[ticketId] ?? "invalid ticket !!!"
 }
+
 
 /**
  * Determines the version of the GTC that was signed by the visitor.
@@ -71,9 +63,5 @@ export function simpleTicketStatus(tickets, ticketId) {
  * @returns {string | undefined} version
  */
 export function gtcVersion(visitor) {
-  if(visitor.gtc?.version){
-    return visitor.gtc.version
-  } else {
-    return undefined
-  }
+  return visitor?.gtc?.version
 }
