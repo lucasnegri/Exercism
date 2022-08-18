@@ -1,4 +1,4 @@
-import { toRna } from './rna-transcription';
+import{ toRna } from './rna-transcription';
 
 describe('Transcription', () => {
   test('empty rna sequence', () => {
