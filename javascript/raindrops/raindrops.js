@@ -3,7 +3,7 @@
 // convenience to get you started writing code faster.
 //
 
-export const convert = (num) => {
+export const convert = (number) => {
   let sound = '';
   number % 3 === 0 ? sound += 'Pling' : sound;
   number % 5 === 0 ? sound += 'Plang' : sound;
