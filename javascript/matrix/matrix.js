@@ -16,4 +16,11 @@ export class Matrix {
     return this.rows[0].map((_,i) => this.rows.map(r => r[i]))
   }
 }
-
+export const countWords = (string) => {
+  string = string.toLowerCase().match(/\w+('\w+)?/g);
+    let words = new Set()
+    string.forEach((word) => {
+        words[word] === undefined ? words[word] = 1 : words[word] += 1;
+  })
+  return words  
+};
