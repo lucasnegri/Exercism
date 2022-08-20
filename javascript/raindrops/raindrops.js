@@ -4,14 +4,9 @@
 //
 
 export const convert = (num) => {
-  let string = []
-  if(Number.isInteger(num/3)){string.push('Pling')}
-  if(Number.isInteger(num/5)){string.push('Plang')};
-  if(Number.isInteger(num/7)){string.push('Plong')};
-  if(string.length === 0){
-    string.push(num);
-    return string.join('')
-  } else {
-    return string.join('')
-  }
+  let sound = '';
+  number % 3 === 0 ? sound += 'Pling' : sound;
+  number % 5 === 0 ? sound += 'Plang' : sound;
+  number % 7 === 0 ? sound += 'Plong' : sound;
+  return sound ? sound : number + ''
 };
