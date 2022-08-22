@@ -5,8 +5,5 @@
 
 export const score = (x,y) => {
   var scr = Math.sqrt((x*x) + (y*y));
-  if (scr > 10) return 0;
-  if (scr > 5) return 1;
-  if (scr > 1) return 5;
-  if (scr <= 1) return 10;
+  return scr <= 1 ? 10 : scr <= 5 ? 5 : scr <= 10 ? 1 : 0;
 };
