@@ -5,38 +5,60 @@
 
 export class List {
   constructor(values = []) {
-    this.values = values;
+    this.values = [...values]
   }
 
-  append(L) {
-   return new List([...this.values, ...L.values]);
+  append(list) {
+    return new List([...this.values, ...list.values]);
   }
 
-  concat(L) {
-    throw new Error('Remove this statement and implement this function');
+  concat(lists) {
+    let t = [...this.values];
+    lists.values.map((number) =>{
+      t = [...t, ...number.values];
+    })
+    return new  List(t)
   }
 
-  filter(L) {
-    throw new Error('Remove this statement and implement this function');
+  filter(predicated) {
+    let filtered = [];
+    this.values.map((number) => {
+      if(predicated(number)) filtered = [...filtered, number]
+    })
+    return new List(filtered)
   }
 
-  map(L) {
-    throw new Error('Remove this statement and implement this function');
+  map(func) {
+    let mapped = [];
+    this.values.map((number) => {
+      mapped = [...mapped, func(number)]
+    })
+    return new List (mapped)
   }
 
-  length(L) {
-    throw new Error('Remove this statement and implement this function');
+  length() {
+    return this.values.length;
   }
 
-  foldl(L) {
-    throw new Error('Remove this statement and implement this function');
+  foldl(func, initial) {
+    let acc = initial;
+    this.map((number) => {
+      acc = func(acc, number);
+    })
+    return acc
   }
 
-  foldr(L) {
-    throw new Error('Remove this statement and implement this function');
+  foldr(func, initial) {
+    const list1= new List([...this.values].reverse());
+    list1.reverse()
+    let acc = initial;
+    list1.map((number)=>{
+      acc = func(acc,number);
+    })
+    return acc;
   }
 
-  reverse(L) {
-    throw new Error('Remove this statement and implement this function');
+  reverse() {
+    return new List([...this.values].reverse())
   }
 }
